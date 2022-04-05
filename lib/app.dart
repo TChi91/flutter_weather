@@ -18,13 +18,15 @@ class WeatherApp extends StatelessWidget {
       value: _weatherRepository,
       child: BlocProvider(
         create: (_) => ThemeCubit(),
-        child: WeatherAppView(),
+        child: const WeatherAppView(),
       ),
     );
   }
 }
 
 class WeatherAppView extends StatelessWidget {
+  const WeatherAppView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -40,7 +42,7 @@ class WeatherAppView extends StatelessWidget {
                   .headline6,
             ),
           ),
-          home: WeatherPage(),
+          home: const WeatherPage(),
         );
       },
     );

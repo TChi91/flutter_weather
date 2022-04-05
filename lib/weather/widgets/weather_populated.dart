@@ -98,7 +98,7 @@ class _WeatherBackground extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          stops: [0.25, 0.75, 0.90, 1.0],
+          stops: const [0.25, 0.75, 0.90, 1.0],
           colors: [
             color,
             color.brighten(10),
