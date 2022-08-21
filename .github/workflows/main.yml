@@ -19,6 +19,7 @@ jobs:
 
   upload-apk:
     name: Upload APK
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/upload-artifact@master
